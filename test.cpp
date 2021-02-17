@@ -1,10 +1,10 @@
 #include "gtest/gtest.h"
-#include "op_test.hpp"
-#include "mult_test.hpp"
-#include "add_test.hpp"
-#include "sub_test.hpp"
-#include "pow_test.hpp"
-#include "div_test.hpp"
+#include "op.hpp"
+#include "mult.hpp"
+#include "add.hpp"
+#include "sub.hpp"
+#include "pow.hpp"
+#include "div.hpp"
 #include <stdio.h>
 
 int main(int argc, char **argv) {
