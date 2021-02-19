@@ -6,14 +6,19 @@
 #include "div.hpp"
 #include "pow.hpp"
 #include "op.hpp"
-
+#include <vector>
+#include "Factory.hpp"
 using namespace std;
 
-int main(int argc, char** argc)
+int main(int argc, char** argv)
 {
-	
-
-	return 0;
+    Factory* factory = new Factory();
+    Base* out = factory -> parse( argv,argc);
+    if(out == NULL) cout << "";
+    else
+    	cout << "Number: " << out -> evaluate() << endl;
+	cout << "String: " << out -> stringify() << endl;
+    return 0;
 }
 
 
