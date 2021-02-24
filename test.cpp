@@ -5,6 +5,7 @@
 #include "sub.hpp"
 #include "pow.hpp"
 #include "div.hpp"
+#include "factory_test.hpp"
 #include <stdio.h>
 
 int main(int argc, char **argv) {
