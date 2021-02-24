@@ -22,6 +22,8 @@ TEST(FactoryTestAdd, AddZero)
 	string s = testExp -> stringify();
 	EXPECT_NEAR(2, eval, 0.01);
 	EXPECT_EQ("(2.000000 + 0.000000)", s);
+	delete testFact;
+	delete testExp;
 }
 
 TEST(FactoryTestAdd, AddEval)
@@ -33,6 +35,8 @@ TEST(FactoryTestAdd, AddEval)
         string s = testExp -> stringify();
         EXPECT_NEAR(5, eval, 0.01);
         EXPECT_EQ("(2.000000 + 3.000000)", s);
+	delete testFact;
+	delete testExp;
 }
 
 TEST(FactoryTestAdd, AddMultiple)
@@ -44,6 +48,8 @@ TEST(FactoryTestAdd, AddMultiple)
         string s = testExp -> stringify();
         EXPECT_NEAR(9, eval, 0.01);
         EXPECT_EQ("((2.000000 + 3.000000) + 4.000000)", s);
+	delete testFact;
+	delete testExp;
 }
 
 TEST(FactoryTestSub, SubZero)
@@ -55,6 +61,8 @@ TEST(FactoryTestSub, SubZero)
         string s = testExp -> stringify();
         EXPECT_NEAR(2, eval, 0.01);
         EXPECT_EQ("(2.000000 - 0.000000)", s);
+	delete testFact;
+	delete testExp;
 }
 
 TEST(FactoryTestSub, SubEval)
@@ -66,6 +74,8 @@ TEST(FactoryTestSub, SubEval)
         string s = testExp -> stringify();
         EXPECT_NEAR(-1, eval, 0.01);
         EXPECT_EQ("(2.000000 - 3.000000)", s);
+	delete testFact;
+	delete testExp;
 }
 
 TEST(FactoryTestSub, SubMultiple)
@@ -77,6 +87,8 @@ TEST(FactoryTestSub, SubMultiple)
         string s = testExp -> stringify();
         EXPECT_NEAR(-5, eval, 0.01);
         EXPECT_EQ("((2.000000 - 3.000000) - 4.000000)", s);
+	delete testFact;
+	delete testExp;
 }
 
 TEST(FactoryTestMult, MultZero)
@@ -88,6 +100,8 @@ TEST(FactoryTestMult, MultZero)
         string s = testExp -> stringify();
         EXPECT_NEAR(0, eval, 0.01);
         EXPECT_EQ("(2.000000 * 0.000000)", s);
+	delete testFact;
+	delete testExp;
 }
 
 TEST(FactoryTestMult, MultEval)
@@ -99,6 +113,8 @@ TEST(FactoryTestMult, MultEval)
         string s = testExp -> stringify();
         EXPECT_NEAR(6, eval, 0.01);
         EXPECT_EQ("(2.000000 * 3.000000)", s);
+	delete testFact;
+	delete testExp;
 }
 
 TEST(FactoryTestMult, MultMultiple)
@@ -110,6 +126,8 @@ TEST(FactoryTestMult, MultMultiple)
         string s = testExp -> stringify();
         EXPECT_NEAR(24, eval, 0.01);
         EXPECT_EQ("((2.000000 * 3.000000) * 4.000000)", s);
+	delete testFact;
+	delete testExp;
 }
 
 TEST(FactoryTestDiv, DivZero)
@@ -121,6 +139,8 @@ TEST(FactoryTestDiv, DivZero)
         string s = testExp -> stringify();
         EXPECT_NEAR(0, eval, 0.01);
         EXPECT_EQ("(0.000000 / 2.000000)", s);
+	delete testFact;
+	delete testExp;
 }
 
 TEST(FactoryTestDiv, DivEval)
@@ -132,6 +152,8 @@ TEST(FactoryTestDiv, DivEval)
         string s = testExp -> stringify();
         EXPECT_NEAR(2, eval, 0.01);
         EXPECT_EQ("(6.000000 / 3.000000)", s);
+	delete testFact;
+	delete testExp;
 }
 
 TEST(FactoryTestDiv, DivMultiple)
@@ -143,6 +165,8 @@ TEST(FactoryTestDiv, DivMultiple)
         string s = testExp -> stringify();
         EXPECT_NEAR(1, eval, 0.01);
         EXPECT_EQ("((16.000000 / 4.000000) / 4.000000)", s);
+	delete testFact;
+	delete testExp;
 }
 
 TEST(FactoryTestPow, PowZero)
@@ -154,6 +178,8 @@ TEST(FactoryTestPow, PowZero)
         string s = testExp -> stringify();
         EXPECT_NEAR(0, eval, 0.01);
         EXPECT_EQ("(0.000000 ** 2.000000)", s);
+	delete testFact;
+	delete testExp;
 }
 
 TEST(FactoryTestPow, PowEval)
@@ -165,6 +191,8 @@ TEST(FactoryTestPow, PowEval)
         string s = testExp -> stringify();
         EXPECT_NEAR(8, eval, 0.01);
         EXPECT_EQ("(2.000000 ** 3.000000)", s);
+	delete testFact;
+	delete testExp;
 }
 
 TEST(FactoryTestPow, PowMultiple)
@@ -176,6 +204,8 @@ TEST(FactoryTestPow, PowMultiple)
         string s = testExp -> stringify();
         EXPECT_NEAR(64, eval, 0.01);
         EXPECT_EQ("((2.000000 ** 3.000000) ** 2.000000)", s);
+	delete testFact;
+	delete testExp;
 }
 
 TEST(FactoryTestOther, NumOnly)
@@ -187,6 +217,8 @@ TEST(FactoryTestOther, NumOnly)
         string s = testExp -> stringify();
         EXPECT_NEAR(2, eval, 0.01);
         EXPECT_EQ("2.000000", s);
+	delete testFact;
+	delete testExp;
 }
 
 TEST(FactoryTestOther, AllOperations)
@@ -198,6 +230,8 @@ TEST(FactoryTestOther, AllOperations)
         string s = testExp -> stringify();
         EXPECT_NEAR(8, eval, 0.01);
         EXPECT_EQ("(((((2.000000 + 3.000000) - 4.000000) * 4.000000) / 2.000000) ** 3.000000)", s);
+	delete testFact;
+	delete testExp;
 }
 
 #endif
