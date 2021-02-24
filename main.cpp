@@ -16,8 +16,12 @@ int main(int argc, char** argv)
     Base* out = factory -> parse( argv,argc);
     if(out == NULL) cout << "";
     else
+    {
     	cout << "Number: " << out -> evaluate() << endl;
 	cout << "String: " << out -> stringify() << endl;
+    }
+    delete factory;
+    delete out;
     return 0;
 }
 
